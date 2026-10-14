@@ -41,14 +41,6 @@ export function Header({ attachToHero = false }: HeaderProps) {
   }, [pathname, attachToHero]);
 
   useEffect(() => {
-    if (!attachToHero) return;
-    document.body.style.paddingBottom = "92px";
-    return () => {
-      document.body.style.paddingBottom = "";
-    };
-  }, [attachToHero]);
-
-  useEffect(() => {
     const syncHash = () => setHash(window.location.hash);
     syncHash();
     window.addEventListener("hashchange", syncHash);

@@ -19,7 +19,7 @@ export function Location({ mapEmbedUrl = officeMapEmbedUrl }: LocationProps) {
       <SectionHeading
         eyebrow="LOCATION"
         title="오시는 길"
-        description="방문 상담을 원하시면 아래 주소를 확인해 주세요. 지도는 추후 API 연동으로 교체할 수 있습니다."
+        description="방문 상담을 원하시면 아래 주소를 확인해 주세요."
       />
       <div className="mt-12 grid grid-cols-1 items-start gap-8 lg:grid-cols-12">
         <div className="space-y-6 lg:col-span-4">

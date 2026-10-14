@@ -28,7 +28,7 @@ export default function Home() {
         <Consultation />
         <Location mapEmbedUrl={site.mapEmbedUrl || undefined} />
       </main>
-      <Footer />
+      <Footer reserveBottomNav />
     </>
   );
 }

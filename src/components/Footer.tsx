@@ -2,9 +2,15 @@ import Link from "next/link";
 import { footerNav } from "@/data/navigation";
 import { site } from "@/data/site";
 
-export function Footer() {
+type FooterProps = {
+  reserveBottomNav?: boolean;
+};
+
+export function Footer({ reserveBottomNav = false }: FooterProps) {
   return (
-    <footer className="bg-navy text-slate-300">
+    <footer
+      className={`bg-navy text-slate-300 ${reserveBottomNav ? "pb-16 sm:pb-[72px]" : ""}`}
+    >
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-12 lg:px-10">
         <div className="lg:col-span-5">
           <p className="text-base font-semibold text-white">{site.name}</p>

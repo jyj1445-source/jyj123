@@ -6,7 +6,7 @@ export function Consultation() {
   return (
     <Section id="consultation" tone="navy">
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-        <div className="lg:col-span-5">
+        <div className="flex h-full flex-col lg:col-span-5">
           <SectionHeading
             light
             eyebrow="CONSULTATION"
@@ -18,6 +18,14 @@ export function Consultation() {
             <br />
             이메일: {site.email}
           </p>
+          <ul className="mt-10 space-y-4 border-t border-white/10 pt-8 lg:mt-auto">
+            {["빠른 대응", "초기 상담 무료", "담당 변호사 직접 검토"].map((item) => (
+              <li key={item} className="flex items-center gap-3 text-sm text-white">
+                <span className="h-px w-4 bg-white/40" aria-hidden />
+                {item}
+              </li>
+            ))}
+          </ul>
         </div>
         <div className="lg:col-span-7">
           <ConsultationForm />
