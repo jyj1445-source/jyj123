@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
-import { getPhoneHref, site } from "@/data/site";
+import { site } from "@/data/site";
 
 export function Hero() {
-  const phoneHref = getPhoneHref();
   const heroSrc = site.heroImageSrc || "/images/hero.jpg";
 
   return (
@@ -26,12 +25,6 @@ export function Hero() {
               className="inline-flex min-h-[44px] w-full items-center justify-center bg-navy px-7 text-[15px] font-medium text-white transition-colors hover:bg-navy-800 sm:min-h-12 sm:w-auto"
             >
               상담 신청
-            </Link>
-            <Link
-              href={phoneHref}
-              className="inline-flex min-h-[44px] w-full items-center justify-center border border-navy bg-white px-7 text-[15px] font-medium text-navy transition-colors hover:bg-gray-50 sm:min-h-12 sm:w-auto"
-            >
-              전화 상담
             </Link>
           </div>
           <div className="mt-8 flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-5">
