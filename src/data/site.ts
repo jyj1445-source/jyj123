@@ -4,10 +4,10 @@ export const site = {
   attorneyName: "김상철",
   address: "울산광역시 북구 호계동 250-3 302호",
   region: "울산광역시 북구",
-  /** 전화번호가 확정되면 숫자만 입력하세요. 예: 0521234567 */
-  phoneTel: "",
-  phoneDisplay: "[추후 입력]",
-  email: "[추후 입력]",
+  /** 전화번호는 숫자만 입력합니다. 화면에는 phoneDisplay가 표시됩니다. */
+  phoneTel: "01080376516",
+  phoneDisplay: "010-8037-6516",
+  email: "junhob707@gmail.com",
   url: "https://example.com",
   heroImageSrc: "/images/hero.jpg",
   attorneyPhotoSrc: "",
