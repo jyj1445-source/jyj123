@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { site } from "@/data/site";
+import { getPhoneHref, site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "개인정보처리방침",
@@ -39,7 +39,8 @@ export default function PrivacyPage() {
             <section>
               <h2 className="text-lg font-semibold text-navy">4. 문의</h2>
               <p className="mt-3">
-                개인정보 관련 문의: {site.attorneyName} / {site.phoneDisplay} / {site.email}
+                개인정보 관련 문의: {site.attorneyName} /{" "}
+                <a href={getPhoneHref()}>{site.phoneDisplay}</a> / {site.email}
               </p>
             </section>
           </div>

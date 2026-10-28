@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import { Section, SectionHeading } from "@/components/Section";
 import { ConsultationForm } from "@/components/ConsultationForm";
-import { site } from "@/data/site";
+import { getPhoneHref, site } from "@/data/site";
 
 export function Consultation() {
   return (
@@ -15,7 +15,10 @@ export function Consultation() {
             description="사건 내용과 연락처를 남겨 주시면 확인 후 안내드립니다. 제출된 내용은 상담 응대 목적으로만 사용됩니다."
           />
           <p className="mt-8 text-sm leading-7 text-slate-400">
-            전화: {site.phoneDisplay}
+            전화:{" "}
+            <a href={getPhoneHref()} className="hover:text-slate-200">
+              {site.phoneDisplay}
+            </a>
             <br />
             이메일: {site.email}
           </p>

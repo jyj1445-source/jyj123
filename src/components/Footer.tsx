@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { footerNav } from "@/data/navigation";
-import { site } from "@/data/site";
+import { getPhoneHref, site } from "@/data/site";
 
 type FooterProps = {
   reserveBottomNav?: boolean;
@@ -26,7 +26,12 @@ export function Footer({ reserveBottomNav = false }: FooterProps) {
             <br />
             {site.address}
           </p>
-          <p className="mt-4 text-sm">전화 {site.phoneDisplay}</p>
+          <p className="mt-4 text-sm">
+            전화{" "}
+            <a href={getPhoneHref()} className="hover:text-white">
+              {site.phoneDisplay}
+            </a>
+          </p>
         </div>
         <nav className="lg:col-span-7" aria-label="푸터 메뉴">
           <ul className="grid gap-x-8 gap-y-3 sm:grid-cols-2">
